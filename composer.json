@@ -1,5 +1,5 @@
 {
-    "name": "kingsquare/json-schema-form",
+    "name": "danielcherrington/json-schema-form",
     "description": "A framework-agnostic PHP Implementation for generating simple forms based on json-schema",
     "authors": [
         {
@@ -7,14 +7,8 @@
             "email": "json-schema-form@kingsquare.nl"
         }
     ],
-	"repositories": [
-		{
-			"url": "https://github.com/alexmmm/json-schema",
-			"type": "vcs"
-		}
-	],
     "require": {
-        "justinrainbow/json-schema": "dev-fix-required-property-validation",
+        "justinrainbow/json-schema": "^5.0",
         "twig/twig": "1.*"
     },
 	"autoload": {
