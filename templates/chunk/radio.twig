@@ -1,10 +1,14 @@
-{% if label %}
-<label for="{{ id }}">{{label}}</label>
-{% endif %}
-<div class="radiogroup">
-	{% for option in options %}
-	<div>
-		<input type="radio" name="{{name}}" value="{{ option.value }}" id="{{ option.id }}"{% if (value == option.value) %} checked="checked"{%  endif %}><label for="{{ option.id }}">{{ option.label }}</label>
-	</div>
-	{% endfor %}
+<div class="form-row">
+    <div class="form-group col-md-12">
+        {% if label %}
+            <label for="{{ id }}">{{label}}</label>
+        {% endif %}
+
+        {% for option in options %}
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="{{name}}" value="{{ option.value }}" id="{{ option.id }}" {% if (value == option.value) %} checked="checked" {%  endif %}>
+                <label class="form-check-label" for="{{ option.id }}">{{ option.label }}</label>
+            </div>
+        {% endfor %}
+    </div>
 </div>
