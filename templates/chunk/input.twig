@@ -1,4 +1,4 @@
 {% if label %}
-	<label for="{{ id }}">{{label}}</label>
+    <label for="{{ id }}">{{label}}</label>
 {% endif %}
-<input type="{{ type }}" name="{{ name }}" value="{{ value }}" id="{{ id }}">
+<input {% if required == "1" %} required="required" {% endif %} class="form-control" type="{{ type }}" name="{{ name }}" value="{{ value }}" id="{{ id }}">
