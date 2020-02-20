@@ -1,5 +1,5 @@
 {
-    "name": "danielcherrington/json-schema-form",
+    "name": "ianyager/json-schema-form",
     "description": "A framework-agnostic PHP Implementation for generating simple forms based on json-schema",
     "authors": [
         {
