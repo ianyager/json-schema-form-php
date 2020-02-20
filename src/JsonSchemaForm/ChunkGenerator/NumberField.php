@@ -15,7 +15,7 @@ class NumberField extends \JsonSchemaForm\ChunkGenerator {
 			$enumTitleKey = (string) $enumValue;
 
 			$options['options'][] = array(
-				'id' =>  $this->getDomCompatible(implode(array_merge($this->path, array($enumValue)),  '-')),
+				'id' =>  $this->getDomCompatible(implode('-', array_merge($this->path, array($enumValue)))),
 				'label' => (isset($enumTitles->$enumTitleKey) ? $enumTitles->$enumTitleKey: $enumValue),
 				'value' => $enumValue
 			);

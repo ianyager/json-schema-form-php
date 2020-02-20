@@ -15,7 +15,7 @@ class StringField extends \JsonSchemaForm\ChunkGenerator {
 		$enumTitles = (isset($this->schema->enumTitles) ? (object) $this->schema->enumTitles : new \StdClass());
 		foreach($this->schema->enum as $enumValue) {
 			$options['options'][] = array(
-				'id' =>  $this->getDomCompatible(implode(array_merge($this->path, array($enumValue)),  '-')),
+				'id' =>  $this->getDomCompatible(implode('-', array_merge($this->path, array($enumValue)))),
 				'label' => (isset($enumTitles->$enumValue) ? $enumTitles->$enumValue: $enumValue),
 				'value' => $enumValue
 			);
